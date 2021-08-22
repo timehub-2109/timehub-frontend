@@ -36,7 +36,6 @@ const formInputs = inputs.map(input => {
 
 function SignUp() {
   const history = useHistory();
-
   async function handleSubmit(e) {
     e.preventDefault();
     let userInfo = {};
@@ -52,14 +51,13 @@ function SignUp() {
       alert(error)
     }
   }
-
   return (
     <div>
       <NonAuthNav />
       <div className="pt-12 flex flex-col w-screen h-screen bg-gray-700">
         <div className="my-4 rounded-lg w-full mx-auto flex flex-col items-center justify-center bg-gray-700">
           <img className='h-36'
-            src={process.env.PUBLIC_URL + '/images/timehub_color_graphic.svg'}
+            src={process.env.PUBLIC_URL + '/images/logos/timehub_color_graphic.svg'}
             alt="A time tracker logo" />
           <h1 className='font-bold text-5xl text-center text-white'>Create an Account</h1>
         </div>

@@ -39,7 +39,7 @@ class Login extends React.Component {
         <div className="pt-12 flex flex-col w-screen h-screen bg-gray-700" >
           <div className="m-4 rounded-lg w-full mx-auto flex flex-col justify-center items-center bg-gray-700">
             <img className='h-36'
-              src={process.env.PUBLIC_URL + '/images/timehub_color_graphic.svg'}
+              src={process.env.PUBLIC_URL + '/images/logos/timehub_color_graphic.svg'}
               alt="A time tracker logo" />
             <h1 className='font-bold text-5xl text-white'>Login</h1>
           </div>

@@ -1,7 +1,12 @@
 {
   "name": "time-tracker-frontend",
+  "main": "server.js",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "7.5.4",
+    "node": "15.8.0"
+  },
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@testing-library/jest-dom": "^5.14.1",

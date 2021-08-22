@@ -3,6 +3,10 @@ import NonAuthNav from './common/NonAuthNav';
 import Auth from './auth/Auth';
 
 class WriteUp extends React.Component {
+  async componentDidMount() {
+    Auth.login({ email: 'sddoherty4@gmail.com', password: 'foobar1' });
+  }
+
   async handleSampleUser(e) {
     try {
       await Auth.login({ email: 'sddoherty4@gmail.com', password: 'foobar1' });
@@ -23,7 +27,7 @@ class WriteUp extends React.Component {
 
   makeImage(src, alt, caption) {
     return (
-      <figure className="flex flex-col gap-2 shadow-inner items-center justify-center my-10 bg-gradient-to-b from-green-300 via-yellow-200 to-red-100 rounded-md p-8 pt-2">
+      <figure className={`flex flex-col gap-2 shadow-inner items-center justify-center my-10 bg-gradient-to-b from-green-300 via-yellow-200 to-red-100 rounded-md p-8 ${caption ? "pt-2" : ""}`}>
         <figcaption className="text-center text-md text-gray-800 font-medium self-center">{caption}</figcaption>
         <img className="rounded-lg shadow-xl"
           src={`${process.env.PUBLIC_URL}/images/writeup/${src}`}
@@ -42,7 +46,7 @@ class WriteUp extends React.Component {
   render() {
     return (
       <div className="h-100 text-gray-700 bg-gradient-to-b from-gray-100 to-white">
-        <div className="bg-gray-700 flex flex-col h-screen justify-center items-center">
+        <div className="bg-gray-700 flex flex-col h-80 justify-center items-center">
           <img className=""
             src={`${process.env.PUBLIC_URL}/images/logos/timehub_color_logo_on_dark.svg`}
             alt="timehub logo">

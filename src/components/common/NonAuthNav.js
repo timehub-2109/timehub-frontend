@@ -35,6 +35,13 @@ class NonAuthNav extends React.Component {
                      Sign up/Login
             </NavLink>
           </li>
+          <li className="flex-1 flex">
+            <NavLink to="/oas-specs" 
+                     className="flex-1 py-3"
+                     activeClassName="bg-gray-100 text-gray-700">
+                     OAS Specs
+            </NavLink>
+          </li>
         </ul>
       </nav>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const pages = [
   {
@@ -32,9 +32,13 @@ class Nav extends React.Component {
   render() {
     return (
       <nav className="w-full shadow-lg flex font-medium bg-gray-700">
-        <img className='w-12 ml-4 mr-4 md:-mr-4'
-            src={process.env.PUBLIC_URL + '/images/logos/timehub_color_graphic.svg'}
-            alt="The timehub icon" />
+        <Link to="/">
+          <img className='w-12 ml-4 mr-4 md:-mr-4'
+               src={process.env.PUBLIC_URL + '/images/logos/timehub_color_graphic.svg'}
+               alt="The timehub icon" 
+          />
+        </Link>
+        
         <ul className="flex justify-between w-full mr-4 md:w-4/6 md:mx-auto">         
           {pageList}
         </ul>
