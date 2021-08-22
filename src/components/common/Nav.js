@@ -38,7 +38,6 @@ class Nav extends React.Component {
                alt="The timehub icon" 
           />
         </Link>
-        
         <ul className="flex justify-between w-full mr-4 md:w-4/6 md:mx-auto">         
           {pageList}
         </ul>

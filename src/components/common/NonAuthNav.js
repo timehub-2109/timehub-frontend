@@ -16,7 +16,7 @@ class NonAuthNav extends React.Component {
   render() {   
     return (
       <nav className="sticky top-0 z-50 bg-gray-700 text-white shadow-lg">
-        <ul className="flex sm:text-xl justify-around text-center font-semibold items-center">
+        <ul className="flex sm:text-lg justify-around text-center font-semibold items-center">
           <li className="flex-1 flex items-center">
             <NavLink exact to="/" 
                      className="flex-1 py-3"
@@ -33,13 +33,6 @@ class NonAuthNav extends React.Component {
                      className="flex-1 py-3"
                      activeClassName="bg-gray-100 text-gray-700">
                      Sign up/Login
-            </NavLink>
-          </li>
-          <li className="flex-1 flex">
-            <NavLink to="/oas-specs" 
-                     className="flex-1 py-3"
-                     activeClassName="bg-gray-100 text-gray-700">
-                     OAS Specs
             </NavLink>
           </li>
         </ul>

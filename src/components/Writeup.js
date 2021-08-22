@@ -3,7 +3,7 @@ import NonAuthNav from './common/NonAuthNav';
 import Auth from './auth/Auth';
 
 class WriteUp extends React.Component {
-  async componentDidMount() {
+  componentDidMount() {
     Auth.login({ email: 'sddoherty4@gmail.com', password: 'foobar1' });
   }
 
@@ -78,7 +78,7 @@ class WriteUp extends React.Component {
               {this.makeHeader("2.2) Processing and Normalizing Data", "h3", "green")}
               {this.makeParagraph("After fetching the data from the third-party time trackers, the Rails API normalizes it into a shared format.")}
               <p></p>
-              {this.makeImage('diagram_3.png', "a diagram")}
+              {this.makeImage('diagram_3.png', "a diagram", "The ERD")}
               {this.makeHeader("To implement this we had to answer some questions of the ETL process:", "h5")}
               <ul className="font-semibold flex">
                 <li className="flex-1 px-2 py-4 text-center bg-red-100">How could we fetch a user’s data while avoiding the transfer of unnecessary data?</li>
