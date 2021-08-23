@@ -98,6 +98,14 @@ const auth = (function Auth() {
       };
 
       return await fetch(url, options);
+    },
+
+    async defaultLogin() {
+      await this.login({ email: 'sddoherty4@gmail.com', password: 'foobar1' });
+    },
+
+    async refreshDB() {
+      await this.get("/refresh");
     }
   }
 })();

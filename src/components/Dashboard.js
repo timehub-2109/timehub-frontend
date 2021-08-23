@@ -39,11 +39,10 @@ class Projects extends React.Component {
   }
 
   async _getDataAfterRefresh() {
-    await Auth.get("/refresh");
+    await Auth.refreshDB();
     await setTimeout(async function() {
       await Promise.all([Auth.get(`/projects`), Auth.get('/time_entries')])
         .then(dataSets => {
-          console.log('datasets are', dataSets);
           this.props.unsetRefreshFlag();
           this.setState({
             projects: dataSets[0],
@@ -312,7 +311,6 @@ class Projects extends React.Component {
       activeDate: new Date(newDate),
       activeWeek: this.getWeekFor(new Date(newDate))
     });
-    // then in componentDidUpdate, check if need to fetch more data
   }
 
   handlePrev(e) {

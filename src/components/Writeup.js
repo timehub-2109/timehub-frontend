@@ -3,13 +3,9 @@ import NonAuthNav from './common/NonAuthNav';
 import Auth from './auth/Auth';
 
 class WriteUp extends React.Component {
-  componentDidMount() {
-    Auth.login({ email: 'sddoherty4@gmail.com', password: 'foobar1' });
-  }
-
   async handleSampleUser(e) {
     try {
-      await Auth.login({ email: 'sddoherty4@gmail.com', password: 'foobar1' });
+      await Auth.defaultLogin();
       this.props.history.push("/dashboard");
     } catch (error) {
       alert(error);
@@ -45,15 +41,16 @@ class WriteUp extends React.Component {
 
   render() {
     return (
-      <div className="h-100 text-gray-700 bg-gradient-to-b from-gray-100 to-white">
-        <div className="bg-gray-700 flex flex-col h-80 justify-center items-center">
+      <div className="text-gray-700 bg-gradient-to-b from-gray-100 to-white">
+        <NonAuthNav/>
+        <div className="bg-gray-700 flex flex-col h-64 justify-center items-center">
           <img className=""
             src={`${process.env.PUBLIC_URL}/images/logos/timehub_color_logo_on_dark.svg`}
             alt="timehub logo">
           </img>
-          <h1 className="max-w-md text-center text-white">Consolidate your time tracking data in a single location</h1>
+          <h1 className="max-w-md text-center text-white">A central hub for your tracked time</h1>
         </div>
-       <NonAuthNav/>
+       
         <div className="max-w-2xl mx-auto mt-10">
           {this.makeHeader("Case Study", "h1", "red")}
           <section className="mt-10">

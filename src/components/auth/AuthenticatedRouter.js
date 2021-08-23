@@ -1,5 +1,5 @@
 import {Redirect, Route, Switch } from 'react-router-dom';
-import Nav from '../common/Nav';
+import Nav from '../common/AuthNav';
 import Auth from './Auth';
 import Logout from '../Logout';
 import Dashboard from '../Dashboard';
@@ -28,8 +28,6 @@ class AuthenticatedRouter extends React.Component {
     this.refreshFlag = false;
   }
 
-
-
   render() {
     if (Auth.isAuthenticated()) {
       return (
@@ -56,13 +54,3 @@ class AuthenticatedRouter extends React.Component {
 }
 
 export default AuthenticatedRouter;
-
-
-
-
-
-// find the greatest value in an array
-// store the val at i[0]
-// loop over every value
-// compare it
-// if its
