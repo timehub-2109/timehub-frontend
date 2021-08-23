@@ -43,15 +43,7 @@ class WriteUp extends React.Component {
     return (
       <div className="text-gray-700 bg-gradient-to-b from-gray-100 to-white">
         <NonAuthNav/>
-        <div className="bg-gray-700 flex flex-col h-64 justify-center items-center">
-          <img className=""
-            src={`${process.env.PUBLIC_URL}/images/logos/timehub_color_logo_on_dark.svg`}
-            alt="timehub logo">
-          </img>
-          <h1 className="max-w-md text-center text-white">A central hub for your tracked time</h1>
-        </div>
-       
-        <div className="max-w-2xl mx-auto mt-10">
+        <div className="max-w-2xl mx-auto pt-20">
           {this.makeHeader("Case Study", "h1", "red")}
           <section className="mt-10">
             {this.makeHeader("1) Abstract", "h2", "yellow")}
