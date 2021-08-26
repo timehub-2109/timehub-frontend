@@ -3,6 +3,37 @@ import { NavLink } from "react-router-dom"
 import { withRouter } from "react-router";
 import Auth from "../auth/Auth";
 
+const links = [
+  {
+    to: "/",
+    name: "Overview"
+  },
+  {
+    to: "/writeup",
+    name: "Case Study"
+  },
+  {
+    to: "/team",
+    name: "Meet the Team"
+  },
+  {
+    to: "/login",
+    name: "Signup / Login"
+  },
+];
+
+const linkList = links.map(link => {
+  return (
+    <li className="flex">
+      <NavLink exact to={link.to}
+        className="flex-1 px-2 py-3"
+        activeClassName="bg-gray-500 text-gray-700">
+        {link.name}
+      </NavLink>
+    </li>
+  )
+});
+
 class NonAuthNav extends React.Component {
   constructor() {
     super();
@@ -44,30 +75,10 @@ class NonAuthNav extends React.Component {
               src={`${process.env.PUBLIC_URL}/images/logos/timehub_color_graphic.svg`}
               alt="timehub logo">
             </img>
-            <li className="flex">
-              <NavLink exact to="/"
-                className="flex-1 px-2 py-3"
-                activeClassName="bg-gray-500 text-gray-700">
-                Overview
-              </NavLink>
-            </li>
-            <li className="flex flex-1">
-              <NavLink exact to="/writeup"
-                className="flex-1 px-2 py-3"
-                activeClassName="bg-gray-500 text-gray-700">
-                Case Study
-              </NavLink>
-            </li>
+            {linkList}
             <li className="flex"
               onClick={(e) => this.handleSampleUser(e)}>
-              <button className="px-2 py-3 focus:outline-none focus:bg-gray-500 focus:text-gray-700 flex-1 font-semibold">Try Sample User</button>
-            </li>
-            <li className="flex">
-              <NavLink to="/login"
-                className="flex-1 px-2 py-3"
-                activeClassName="bg-gray-500 text-gray-700">
-                Sign up/Login
-              </NavLink>
+              <button className="px-2 py-3 text-yellow-300 focus:outline-none focus:bg-gray-500 focus:text-gray-700 flex-1 font-semibold">Try Sample User</button>
             </li>
           </ul>
         </nav>

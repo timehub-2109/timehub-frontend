@@ -7,7 +7,9 @@ import Login from './Login';
 import SignUp from './SignUp';
 import NotFound from './common/NotFound';
 import ScrollToTop from './common/ScrollToTop';
+import MeetTheTeam from './MeetTheTeam';
 import auth from './auth/Auth';
+
 
 class App extends React.Component {
   componentDidMount() {
@@ -22,6 +24,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={Landing} />
               <Route path="/writeup" component={WriteUp} />
+              <Route path="/team" component={MeetTheTeam} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={SignUp} />
               <Route render={(props) => <AuthenticatedRouter {...props} />} />

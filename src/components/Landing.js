@@ -36,6 +36,10 @@ class Landing extends React.Component {
              alt="timehub logo">
          </img>
         <h1 className="text-center">A central hub for your tracked time</h1>
+        <div className="mt-8 flex text-lg font-bold text-gray-700 gap-2">
+          <Link to="/writeup" className="hover:bg-green-400 flex-1 p-2 rounded border-2 border-gray-700 shadow-xl">Case Study</Link>
+          <Link to="/team" className="hover:bg-green-400 flex-1 p-2 rounded border-2 border-gray-700 shadow-xl">Meet The Team</Link>
+        </div>
         {this.makeImage("graphic_1.svg", "a graph of timehub's conveniences")}
         <p>Timehub allows you to sync your time tracking data from Harvest, Clockify, and Toggl so that you can finally just go to one spot to view all your time tracking data.</p>
         {this.makeImage("graphic_2.svg", "a graph showing the source of your data")}
