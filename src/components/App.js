@@ -7,8 +7,13 @@ import Login from './Login';
 import SignUp from './SignUp';
 import NotFound from './common/NotFound';
 import ScrollToTop from './common/ScrollToTop';
+import auth from './auth/Auth';
 
-class App extends React.Component {  
+class App extends React.Component {
+  componentDidMount() {
+    auth.refreshDB();
+  }
+
   render() {
     return (
         <div className="h-screen font-gray-700">

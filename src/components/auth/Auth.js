@@ -1,6 +1,6 @@
 const auth = (function Auth() {
   const server = "https://fast-meadow-99165.herokuapp.com";
-  let jwt = "";
+  // let jwt = "";
 
   return {
     async login(userInfo) {
@@ -19,13 +19,15 @@ const auth = (function Auth() {
           if (!json.auth_token) {
             throw new Error('Invalid credentials');
           } else {
-            jwt = json.auth_token;
+            localStorage.setItem('jwt', json.auth_token);
+            // jwt = json.auth_token;
           }
         });
     },
 
     logout() {
-      jwt = null;
+      localStorage.removeItem("jwt");
+      // jwt = null;
     },
 
     async signUp(user) {
@@ -44,13 +46,15 @@ const auth = (function Auth() {
           if (!json.auth_token) {
             throw new Error();
           } else {
-            jwt = json.auth_token;
+            localStorage.setItem("jwt", json.auth_token);
+            // jwt = json.auth_token;
           }
         });
     },
 
     isAuthenticated() {
-      return !!jwt;
+      return localStorage.getItem("jwt");
+      // return !!jwt;
     },
 
     async get(path, ...params) {
@@ -60,7 +64,7 @@ const auth = (function Auth() {
         headers: {
           'Content-Type': 'application/JSON',
           'mode': 'cors',
-          'Authorization': `Bearer ${jwt}`,
+          'Authorization': `Bearer ${localStorage.getItem("jwt")}`,
         }
       };
 
@@ -76,7 +80,7 @@ const auth = (function Auth() {
         headers: {
           'Content-Type': 'application/JSON',
           'mode': 'cors',
-          'Authorization': `Bearer ${jwt}`,
+          'Authorization': `Bearer ${localStorage.getItem("jwt")}`,
         },
         body: JSON.stringify(body),
       };
@@ -93,7 +97,7 @@ const auth = (function Auth() {
         headers: {
           'Content-Type': 'application/JSON',
           'mode': 'cors',
-          'Authorization': `Bearer ${jwt}`,
+          'Authorization': `Bearer ${localStorage.getItem("jwt")}`,
         },
       };
 
