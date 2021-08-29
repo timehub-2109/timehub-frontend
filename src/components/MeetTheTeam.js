@@ -41,13 +41,13 @@ const teamList = teammates.map(teammate => {
           href={teammate.github}>
           <img className="object-contain mx-auto rounded shadow-xl"
             src={`${process.env.PUBLIC_URL}/images/team/github.png`}
-            alt={teammate.name} />
+            alt="a link to their github" />
         </a>
         <a className="object-contain w-7"
         href={teammate.linkedin}>
           <img className="object-contain mx-auto rounded shadow-md"
             src={`${process.env.PUBLIC_URL}/images/team/linkedin.png`}
-            alt={teammate.name} />
+            alt="a link to their linkedin" />
         </a>
       </div>
     </li>
