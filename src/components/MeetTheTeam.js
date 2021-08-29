@@ -31,7 +31,7 @@ const teamList = teammates.map(teammate => {
   return (
     <li className="max-w-xs">
       <figure>
-        <image className="object-contain w-auto mx-auto rounded shadow-xl"
+        <img className="object-contain w-auto mx-auto rounded shadow-xl"
           src={`/images/team/${teammate.image}`}
           alt={teammate.name} />
         <figcaption className="text-center font-semibold text-md">{teammate.name}</figcaption>
@@ -39,13 +39,13 @@ const teamList = teammates.map(teammate => {
       <div className="flex justify-center gap-2 h-20">
         <a className="object-contain w-7" 
           href={teammate.github}>
-          <image className="object-contain mx-auto rounded shadow-xl"
-            src={`/images/team/github.png`}
+          <img className="object-contain mx-auto rounded shadow-xl"
+            src={`/images/team/GitHub.png`}
             alt="a link to their github" />
         </a>
         <a className="object-contain w-7"
         href={teammate.linkedin}>
-          <image className="object-contain mx-auto rounded shadow-md"
+          <img className="object-contain mx-auto rounded shadow-md"
             src={`/images/team/lin.png`}
             alt="a link to their linkedin" />
         </a>
