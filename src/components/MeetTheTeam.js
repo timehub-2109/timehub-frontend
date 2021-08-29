@@ -46,7 +46,7 @@ const teamList = teammates.map(teammate => {
         <a className="object-contain w-7"
         href={teammate.linkedin}>
           <img className="object-contain mx-auto rounded shadow-md"
-            src={`/images/team/linkedin.png`}
+            src={`/images/team/lin.png`}
             alt="a link to their linkedin" />
         </a>
       </div>
