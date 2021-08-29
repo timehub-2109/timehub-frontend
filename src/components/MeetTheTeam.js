@@ -32,7 +32,7 @@ const teamList = teammates.map(teammate => {
     <li className="max-w-xs">
       <figure>
         <img className="object-contain w-auto mx-auto rounded shadow-xl"
-          src={`${process.env.PUBLIC_URL}/images/team/${teammate.image}`}
+          src={`/images/team/${teammate.image}`}
           alt={teammate.name} />
         <figcaption className="text-center font-semibold text-md">{teammate.name}</figcaption>
       </figure>
@@ -40,13 +40,13 @@ const teamList = teammates.map(teammate => {
         <a className="object-contain w-7" 
           href={teammate.github}>
           <img className="object-contain mx-auto rounded shadow-xl"
-            src={`${process.env.PUBLIC_URL}/images/team/github.png`}
+            src={`/images/team/github.png`}
             alt="a link to their github" />
         </a>
         <a className="object-contain w-7"
         href={teammate.linkedin}>
           <img className="object-contain mx-auto rounded shadow-md"
-            src={`${process.env.PUBLIC_URL}/images/team/linkedin.png`}
+            src={`/images/team/linkedin.png`}
             alt="a link to their linkedin" />
         </a>
       </div>
